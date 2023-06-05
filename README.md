@@ -56,21 +56,7 @@ The project utilizes the following graph algorithms:
 
 5. Modify and adapt the code as needed for your specific requirements and use cases.
 
-## Timeline
-
-- November 8: Finish proposal and contract
-- November 30: Download and process the dataset into an adjacency matrix
-- December 3: Implement BFS and DFS traversal algorithms
-- December 6: Implement Dijkstra's Algorithm
-- December 11: Implement betweenness centrality algorithm
-- December 12: Ensure codebase functionality and compatibility with various datasets
-- December 13: Finalize project deliverables and documentation
-
-## Contributors
-
-- John Doe: john@example.com
-- Jane Smith: jane@example.com
 
 Please feel free to contribute to this project by creating pull requests or raising issues for bug fixes or enhancements.
 
-**Note:** This project was developed as part of a final project for [Course Name/Number]
+**Note:** This project was developed as part of a final project for CS225 (at UIUC).
