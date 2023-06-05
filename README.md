@@ -40,7 +40,7 @@ The project utilizes the following graph algorithms:
 
 3. **Betweenness Centrality:** The betweenness centrality algorithm is applied to identify the most significant airports in terms of their influence on the overall connectivity of the graph. This information can be valuable for flight route planning.
 
-## Usage
+<!-- ## Usage
 
 1. Clone the repository:
 
@@ -56,6 +56,69 @@ The project utilizes the following graph algorithms:
 
 5. Modify and adapt the code as needed for your specific requirements and use cases.
 
+ -->
+ 
+ ## Installation
+
+To use the parser dependency for reading and processing the CSV data, follow these steps:
+
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/your-username/flight-route-planning.git
+   ```
+
+2. Download the openFlights dataset from the CS225 example datasets or from the OpenFlights website.
+
+3. Process the dataset by running the provided Python code for data conversion.
+
+4. Install the fast-cpp-csv-parser dependency by following the instructions below:
+
+   - Visit the GitHub repository: [fast-cpp-csv-parser](https://github.com/ben-strasser/fast-cpp-csv-parser)
+   - Follow the installation instructions provided in the repository's README.
+
+   Alternatively, you can use the following steps to install the dependency:
+
+   - Clone the fast-cpp-csv-parser repository:
+
+     ```shell
+     git clone https://github.com/ben-strasser/fast-cpp-csv-parser.git
+     ```
+
+   - Copy the necessary source files from the cloned repository into your project directory.
+
+5. Run the main code files to perform graph traversal, find shortest paths, and calculate betweenness centrality.
+
+6. Modify and adapt the code as needed for your specific requirements and use cases.
+
+## Usage
+
+The fast-cpp-csv-parser dependency provides efficient CSV parsing capabilities. You can use it to process the CSV data from the openFlights dataset.
+
+Here is an example of how to use the parser in your code:
+
+```cpp
+#include "csv.h" // Include the CSV parser header file
+
+int main() {
+    io::CSVReader<8> reader("data.csv"); // Create a CSV reader object for the data file
+    reader.read_header(io::ignore_extra_column, "ID", "Name", "City", "Country", "Latitude", "Longitude", "Altitude", "Timezone");
+
+    int id;
+    std::string name, city, country;
+    double latitude, longitude;
+    int altitude, timezone;
+
+    while (reader.read_row(id, name, city, country, latitude, longitude, altitude, timezone)) {
+        // Process each row of data
+        // Perform graph operations or data analysis
+    }
+
+    return 0;
+}
+```
+
+Make sure to update the file name and column names in the `CSVReader` constructor according to your dataset.
 
 ## Final Words 
 
